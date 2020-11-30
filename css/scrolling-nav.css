@@ -12,5 +12,10 @@ section {
   padding: 150px 0;
   background-color: black;
 }
+.form-control{
+background-color: rgb(0, 0, 0);
+color: whitesmoke !important;
+
+}
 
 
