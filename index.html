@@ -11,14 +11,152 @@
   <title>A Space Adventure - George Moraitis GameOff 2020</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
 
   <!-- Custom styles for this template -->
-  <link href="css/scrolling-nav.css" rel="stylesheet">
+  <style>
+    header {
+      padding: 156px 0 100px;
+      background-color: black;
+    }
+
+    section {
+      padding: 150px 0;
+      background-color: black;
+    }
+
+    .form-control {
+      background-color: rgb(0, 0, 0);
+      color: rgb(0, 225, 255) !important;
+    }
+
+    a {
+      color: rgba(255, 94, 94, 0.582) !important;
+    }
+  </style>
+
+
 
 </head>
 
 <body id="page-top">
+  <script>
+
+    //Button for play pause music
+    function play_pause() {
+      var myAudio = document.getElementById("myAudio");
+      if (myAudio.paused) {
+        myAudio.play();
+      } else {
+        myAudio.pause();
+      }
+    }
+
+
+    window.addEventListener("load", () => {
+      //window loaded
+      //do something
+
+      document.addEventListener("keypress", function (event) {
+        var node = document.createElement("LI");
+        if (event.key === "Enter") {
+          var text = document.getElementById("input").value.toLowerCase();
+
+          // Start
+          if (text === 'start') {
+
+            var textnode = document.createTextNode("The year is 2789. Humankind had leave planet Earth a lot of time ago. They found peace on a planet name Nexus far far away from Earth. After a long time, a bad creature named Darun from planet Ratmond decided to kill all humans and conquest planet Nexus. You are in the middle of this war and you are about to save mankind. You found an old map for a secret room from an old forgotten wizard that will guide you to find the code to deactivate Darun's bomb. You are in this room, type north , east, west, south to move in the room. Only type the word...");
+            node.appendChild(textnode);
+            document.getElementById("computer").appendChild(node);
+            var music = document.getElementById("myAudio");
+            music.play();
+          }
+          // North
+          else if (text === "north") {
+
+            var textnode = document.createTextNode("There is a wall in front of you with some old pictures and dust books. I don't think that you will find something there...Try something else...   ");
+            node.appendChild(textnode);
+            document.getElementById("computer").appendChild(node);
+          }
+
+          // East
+          else if (text === "east") {
+
+            var textnode = document.createTextNode("Also nothing here but hey look carefully there is a bottle with some special magic juice. Some of the wizard's old tricks...Drink it to get power to continue, and try something else...");
+            node.appendChild(textnode);
+            document.getElementById("computer").appendChild(node);
+          }
+
+          // West
+          else if (text === "west") {
+
+            var textnode = document.createTextNode("Again nothing here but wait ... there is an old note and it might be from the wizard...Type 'read note' to read it...There must be a clue inside right?");
+            node.appendChild(textnode);
+            document.getElementById("computer").appendChild(node);
+          }
+
+          // Open Note
+          else if (text === "read note") {
+
+            var textnode = document.createTextNode(" ...Yes I am the wizard and you did great so far...There is one place that didn't go...Can you imagine what it is?... You will face 3 challenges when you find what you are looking for... ");
+            node.appendChild(textnode);
+            document.getElementById("computer").appendChild(node);
+          }
+
+          // South
+          else if (text === "south") {
+            var node = document.createElement("LI");
+            var textnode = document.createTextNode("Great !!! You found the old secret door behind you...Now get in that room to answer 3 questions. If you are correct you will get the code to stop the disaster... Hurry up ... you see there is no time left ... Type 'ready' to start with the first question... ");
+            node.appendChild(textnode);
+            document.getElementById("computer").appendChild(node);
+          }
+
+          // Ready to answer
+          else if (text === "ready") {
+            var node = document.createElement("LI");
+            var textnode = document.createTextNode("I will give you two numbers and figure out what is the third one so if you add all together or multiply all together the answer will be 6. ");
+            node.appendChild(textnode);
+            document.getElementById("computer").appendChild(node);
+          }
+
+          // First Question result
+          else if (text === '3') {
+            var node = document.createElement("LI");
+            var textnode = document.createTextNode("Correct !!! Now Dr. Ram has 5 sons. Each of his sons has a sister. If so, how many children does Dr.Ram have?  ");
+            node.appendChild(textnode);
+            document.getElementById("computer").appendChild(node);
+          }
+
+          // Second Question result
+          else if (text === '6') {
+            var node = document.createElement("LI");
+            var textnode = document.createTextNode("Amazing !!! You are too close !!! There is a three-digit number. The second digit is 4 times bigger than the third digit. The first digit is 3 less than the second digit. What number is it?");
+            node.appendChild(textnode);
+            document.getElementById("computer").appendChild(node);
+          }
+
+          // Third Question result
+          else if (text === '141') {
+            var node = document.createElement("LI");
+            var textnode = document.createTextNode("I knew that you are the one that will save mankind!!! You know that the wizard has his old tricks right? After you solve the riddles you automatically transferred to Darun's spaceship in the bombs room. All you have to do is to type the numbers together in the opposite order you found them...Hurry up !!!");
+            node.appendChild(textnode);
+            document.getElementById("computer").appendChild(node);
+          }
+
+          // Found code
+          else if (text === '14163') {
+            var node = document.createElement("LI");
+            var textnode = document.createTextNode("Congratulations !!! You saved mankind !!! The bomb deactivated and you defeated  Darun !!! Thank you for playing. The end.");
+            node.appendChild(textnode);
+            document.getElementById("computer").appendChild(node);
+          }
+        }
+      });
+    });
+
+  </script>
 
   <header class="text-white">
     <div class="container text-center">
@@ -73,23 +211,26 @@
           </p>
 
           <p class="lead text-center">
-           Thank you for playing. </p>
+            Thank you for playing. </p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+
 
   <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <!-- <script src="vendor/jquery-easing/jquery.easing.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
 
-  <!-- Custom JavaScript for this theme -->
-  <script src="js/scrolling-nav.js"></script>
-
-  <script src="js/game.js"></script>
 
 </body>
 
