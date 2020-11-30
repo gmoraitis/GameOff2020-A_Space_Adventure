@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Scrolling Nav - Start Bootstrap Template</title>
+  <title>A Space Adventure - George Moraitis GameOff 2020</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -20,63 +20,35 @@
 
 <body id="page-top">
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#services">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
   <header class="text-white">
     <div class="container text-center">
       <img src="./space.png" class="img-fluid" alt="Responsive image">
-      <!-- <h1>Welcome to Scrolling Nav</h1>
-      <p class="lead">A landing page template freshly redesigned for Bootstrap 4</p>
-    </div> -->
   </header>
-
+  
   <section id="about">
     <div class="container text-white">
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>A Space Adventure</h2>
-          <p class="lead">This is a great place to talk about your webpage. This template is purposefully unstyled so you can use it as a boilerplate or starting point for you own landing page designs! This template features:</p>
+          <p class="lead">Type 'start' , press enter to begin</p>
           <ul id="computer">
-            <li>Type north</li>
-            <!-- <li id="computer"></li> -->
+            <!-- Text -->
           </ul>
           <input type="email" class="form-control" id="input" value="">
+          <br>
+          <button type="button" class="btn btn-outline-info" onclick="play_pause()">Pause/Play</button>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="services" class="bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2>Services we offer</h2>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  
+
+  <audio id="myAudio" preload loop>
+    <source src="out_there.mp3" type="audio/mpeg">
+    Your browser does not support this audio format.
+  </audio>
+
 
   <section id="contact">
     <div class="container">
@@ -88,14 +60,6 @@
       </div>
     </div>
   </section>
-
-  <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
-    </div>
-    <!-- /.container -->
-  </footer>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
