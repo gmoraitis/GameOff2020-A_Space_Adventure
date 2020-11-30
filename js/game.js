@@ -4,7 +4,7 @@ window.addEventListener("load", () => {
 
   document.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
-      var text = document.getElementById("input").value;
+      var text = document.getElementById("input").value.toLowerCase();
     
 
       if (text === "north") {
