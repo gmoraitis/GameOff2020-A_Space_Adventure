@@ -103,7 +103,7 @@ window.addEventListener("load", () => {
             }
 
             // Third Question result
-            else if (text === '141') {
+            else if (text === '141' || text === '582') {
                 var node = document.createElement("LI");
                 var textnode = document.createTextNode("I knew that you are the O N E that will save mankind!!! You know that the wizard has his old tricks right? After you solve the riddles you automatically transferred to Darun's spaceship in the bombs room. All you have to do is to type the numbers together in the opposite order you found them...Hurry up !!!");
                 node.appendChild(textnode);
@@ -112,7 +112,7 @@ window.addEventListener("load", () => {
             }
 
             // Found code
-            else if (text === '14163') {
+            else if (text === '14163' || text === '58263') {
                 var node = document.createElement("LI");
                 var textnode = document.createTextNode("Congratulations !!! You saved mankind !!! The bomb deactivated and you defeated  Darun !!! Thank you for playing. The end.");
                 node.appendChild(textnode);
