@@ -69,7 +69,8 @@ window.addEventListener("load", () => {
             // South
             else if (text === "south") {
                 var node = document.createElement("LI");
-                var textnode = document.createTextNode("Great !!! You found the old secret door behind you...Now get in that room to answer 3 questions. If you are correct you will get the code to stop the disaster... Hurry up ... you see there is no time left ... Type 'ready' to start with the first question... ");
+                var textnode = document.createTextNode("Great !!! You found the old secret door behind you...Now get in that room to answer 3 questions. If you are correct you will get the code to stop the disaster... Hurry up ... you see there is no time left ... Type '
+                                                       ' to start with the first question... ");
                 node.appendChild(textnode);
                 document.getElementById("computer").appendChild(node);
                 document.getElementById("computer").appendChild(br);
@@ -78,7 +79,7 @@ window.addEventListener("load", () => {
             // Ready to answer
             else if (text === "ready") {
                 var node = document.createElement("LI");
-                var textnode = document.createTextNode("I will give you two numbers and figure out what is the third one so if you add all together or multiply all together the answer will be 6. ");
+                var textnode = document.createTextNode("I will give you two numbers.  Figure out what is the third one, so that if you add all together or multiply all together, the answer will be 6.  The first two are 1 and 2... ");
                 node.appendChild(textnode);
                 document.getElementById("computer").appendChild(node);
                 document.getElementById("computer").appendChild(br);
