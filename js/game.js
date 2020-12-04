@@ -18,6 +18,7 @@ window.addEventListener("load", () => {
         var br = document.createElement("BR");
         if (event.key === "Enter") {
             var text = document.getElementById("input").value.toLowerCase();
+            document.getElementById("input").value = "";
 
             // Start
             if (text === 'start') {
